@@ -1,5 +1,6 @@
 from models.checkerboard import Checkerboard
 
+
 class TestCheckBoard:
 
     def test_checker_board_view(self):
