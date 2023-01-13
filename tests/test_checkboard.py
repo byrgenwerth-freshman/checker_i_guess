@@ -15,5 +15,4 @@ class TestCheckBoard:
         ⬜️⬛️⬜️⬛️⬜️⬛️️⬜️⬛️️️
         ️⬛️⬜️⬛️⬜️⬛️️⬜️⬛⬜️️️️️
         """
-        print(str(checker_board))
         assert correct_checker_board == str(checker_board)
