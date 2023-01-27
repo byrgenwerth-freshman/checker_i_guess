@@ -1,4 +1,4 @@
-from models.checkerboard import Checkerboard
+from checkers.models.checkerboard import Checkerboard
 
 
 class TestCheckBoard:
