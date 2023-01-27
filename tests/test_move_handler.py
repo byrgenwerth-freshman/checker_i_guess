@@ -6,8 +6,10 @@ from checkers.handlers.move_handler import MoveHandler
 class TestMoveChecker:
 
     def test_move_checker(self):
-        checker = Checker(0, 0)
-        move_handler = MoveHandler()
+        checker = Checker(0, 0, 'red')
+        checker_board = Checkerboard()
+        checker_board.add_checker(checker)
+        move_handler = MoveHandler(checker_board)
 
         assert move_handler.move(checker, 'r')
 
@@ -15,8 +17,10 @@ class TestMoveChecker:
         assert 1 == checker.y
 
     def test_move_checker_fails_off_board(self):
-        checker = Checker(0, 0)
-        move_handler = MoveHandler()
+        checker = Checker(0, 0, 'red')
+        checker_board = Checkerboard()
+        checker_board.add_checker(checker)
+        move_handler = MoveHandler(checker_board)
 
         assert not move_handler.move(checker, 'l')
 
@@ -36,8 +40,6 @@ class TestMoveChecker:
 
         assert 2 == red_checker.x
         assert 2 == red_checker.y
-
-        
 
         assert None == checker_board.checkers[(1, 1)]
 
